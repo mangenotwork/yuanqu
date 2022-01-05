@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <title>FrozenUI Demo</title>
+    <!-- 引入 FrozenUI -->
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <style>
+        html,body{
+            margin:0;padding:0;height:100%;width:100%;
+        }
+
+        footer{
+            background:#fff;max-width: 750px;width: 100%;height: 8%;
+        }
+
+        .tab {
+            background:#fff;max-width: 750px;width: 100%;height: 7%;
+        }
+
+        .app{
+            display:flex;display: -webkit-flex;height:100%;flex-direction:column;
+        }
+
+        .roll{
+            flex: 1; width: 100%;overflow-y: scroll;-webkit-overflow-scrolling: touch;height: auto;
+        }
+
+        .user-avatar {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            float: left;
+            margin-bottom: 2px;
+        }
+
+        .user-avatar img {
+            width: 38px;
+            height: 38px;
+            border-radius:18px;
+            float: left;
+        }
+
+        .user-name {
+            margin-left: 12px; float: left;
+        }
+
+        .topic {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            border-bottom:1px solid #fff;
+        }
+
+        .topic-time {
+            font-size: 12px;
+        }
+
+        .content {
+            box-sizing: border-box;
+            padding: 18px;
+        }
+
+        .red {
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- 选项卡 -->
+    <div class="tab">
+        <div class="ui-row-flex ui-whitespace">
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.20rem;line-height: 1.1">好友</div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.15rem;line-height: 1.1; font-size: 21px;">推荐</div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.20rem;line-height: 1.1">关注</div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.20rem;line-height: 1.1">附近</div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.15rem;"><i class="fa fa-search" style="width: 100%;font-size: 21px;"></i></div>
+        </div>
+    </div>
+
+
+    <div class="roll">
+
+
+
+        <div class="list">
+
+
+            <div class="topic">
+                <div class="user-avatar">
+                    <img src="http://192.168.0.9:28888/img/1.jpg"/>
+                    <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
+                </div>
+                <div class="content">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <div class="ui-feeds" style="height: 100%;">
+                        <ul>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i1.jpg)"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                    <div class="ui-col ui-col"><i class="fa fa-heart red" ></i> 100 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                </div>
+            </div>
+
+
+
+            <div class="topic">
+                <div class="user-avatar">
+                    <img src="http://192.168.0.9:28888/img/1.jpg"/>
+                    <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
+                </div>
+                <div class="content">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <div class="ui-feeds">
+                        <ul>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i2.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i3.jpg)"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                    <div class="ui-col ui-col"><i class="fa fa-heart red"></i> 100 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                </div>
+            </div>
+
+
+            <div class="topic">
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/1.jpg"/>
+                    <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
+                </div>
+                <div class="content">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <div class="ui-feeds">
+                        <ul>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i4.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i5.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i6.jpg)"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                    <div class="ui-col ui-col"><i class="fa fa-heart red"></i> 100 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                </div>
+            </div>
+
+
+            <div class="topic">
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/1.jpg"/>
+                    <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
+                </div>
+                <div class="content">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <div class="ui-feeds">
+                        <ul>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i7.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i8.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i9.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i10.jpg)"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                    <div class="ui-col ui-col"><i class="fa fa-heart red"></i> 100 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                </div>
+            </div>
+
+
+            <div class="topic">
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/1.jpg"/>
+                    <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
+                </div>
+                <div class="content">
+                  <span style="width:100%">
+                      这是我的故事, 啥都会尽快撒傻大姐哈市的金卡是dlkasdjklas askjdhaskdhsakjdhj
+                  </span>
+                    <div class="ui-feeds">
+                    </div>
+                </div>
+                <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                    <div class="ui-col ui-col"><i class="fa fa-heart red"></i> 100 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                </div>
+            </div>
+
+
+
+            <div class="topic">
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/1.jpg"/>
+                    <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
+                </div>
+                <div class="content">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <div class="ui-feeds">
+                        <ul>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i11.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i12.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i13.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i14.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i10.jpg)"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                    <div class="ui-col ui-col"><i class="fa fa-heart red"></i> 100 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                </div>
+            </div>
+
+
+            <div class="topic">
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/1.jpg"/>
+                    <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
+                </div>
+                <div class="content">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <div class="ui-feeds">
+                        <ul>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i1.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i6.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i3.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i11.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i9.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i4.jpg)"></span>
+                            </li>
+                            <li>
+                                <span style="background-image:url(http://192.168.0.9:28888/img/i14.jpg)"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                    <div class="ui-col ui-col"><i class="fa fa-heart red"></i> 100 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                    <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                </div>
+            </div>
+
+            <div style="width: 100%;text-align: center;">
+                <br/>
+                加载更多...
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <footer>
+
+        <div class="ui-row-flex ui-whitespace">
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1"><i class="fa fa-cloud fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">社区</span></div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1"><i class="fa fa-venus-mars fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">好友</span></div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.05rem;"><i class="fa fa-camera" style="font-size: 38px;"></i></div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1"><i class="fa fa-comment fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">消息</span></div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1"><i class="fa fa-user fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">我的</span></div>
+        </div>
+
+
+</footer>
+
+</div>
+
+
+</body>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+</script>
+</html>
