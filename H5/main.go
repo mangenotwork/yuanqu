@@ -26,6 +26,7 @@ func Router() *http.ServeMux {
 
 	mux.Handle("/", http.HandlerFunc(Index))
 
+	mux.Handle("/detail", http.HandlerFunc(Detail))
 
 
 	return mux
@@ -73,6 +74,20 @@ func Img(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w,r,file)
 		return
 	}
+}
+
+func Detail(w http.ResponseWriter, r *http.Request) {
+	str, _ := os.Getwd()
+	path := str + "/view/detail.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		w.WriteHeader(404)
+		_,_=fmt.Fprintln(w, err)
+		return
+	}
+	w.Header().Add("Content-Type", "text/html; charset=utf-8")
+	_,_=fmt.Fprintln(w, string(data))
+	return
 }
 
 func HttpServer(router *http.ServeMux){

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <title>FrozenUI Demo</title>
+    <!-- 引入 FrozenUI -->
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <style>
+        html,body{
+            margin:0;padding:0;height:100%;width:100%;
+        }
+
+        footer{
+            background:#fff;max-width: 750px;width: 100%;height: 8%;
+        }
+
+        .tab {
+            background:#fff;max-width: 750px;width: 100%;height: 7%;
+        }
+
+        #app{
+            display:flex;display: -webkit-flex;height:100%;flex-direction:column;
+        }
+
+        .roll{
+            flex: 1; width: 100%;overflow-y: scroll;-webkit-overflow-scrolling: touch;height: auto;
+        }
+
+        .user-avatar {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            float: left;
+            margin-bottom: 2px;
+        }
+
+        .user-avatar img {
+            width: 38px;
+            height: 38px;
+            border-radius:18px;
+            float: left;
+        }
+
+        .user-name {
+            width: 80%;
+            margin-left: 12px;
+            float: left;
+        }
+
+        .topic {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            border-bottom:1px solid #fff;
+        }
+
+        .topic-time {
+            font-size: 12px;
+            float: left;
+        }
+
+        .content {
+            box-sizing: border-box;
+            padding: 18px;
+        }
+
+        .comment-topic {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            border-bottom:1px solid #ddd;
+        }
+
+        .comment-content {
+            box-sizing: border-box;
+            /*padding: 18px;*/
+        }
+
+
+        .red {
+            color: red;
+        }
+
+        .ui-whitespace {
+            padding-left: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="app">
+
+
+    <!-- 选项卡 -->
+    <div class="tab">
+        <div class="ui-row-flex ui-whitespace">
+            <div class="ui-col" style="padding-top: 12px;padding-left: 12px;"><i class="fa fa-chevron-left" style="font-size:28px;"></i></div>
+            <div class="ui-col ui-col-4">
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/1.jpg" />
+                    <div style="margin-left: 12px; float: left;padding-top: 8px;">XXXXXXX</div>
+                </div>
+
+            </div>
+            <div class="ui-col ui-col-4">
+
+                <i class="fa fa-share-square" style="padding-top: 8px;font-size: 28px;float: right;margin-left: 16px;color: #FB6155;"></i>
+
+                <div style="padding-top: 8px;float: right;margin-right: 8px;">
+                    <button class="ui-btn ui-btn-danger">关注</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="roll">
+
+
+
+        <div class="list" style="margin-top: 18px;">
+
+            <div class="content">
+                    <span style="width:100%">
+                        这是我的图片
+                    </span>
+                <br/>
+                <br/>
+
+                <img src="http://192.168.0.9:28888/img/i2.jpg" style="width:100%;height: 100%;" />
+
+                <br/>
+
+                <img src="http://192.168.0.9:28888/img/i3.jpg" style="width:100%;height: 100%;" />
+
+
+            </div>
+
+        </div>
+
+        <div style="width:100%;font-size:12px;color: #808080;">
+            <span style="margin-left:12px;">时间: 2022-01-06</span> <span style="float: right;margin-right: 12px;">访问: 1234</span>
+        </div>
+
+
+        <hr style="color:#fff" />
+
+        <div class="comment"  style="margin-bottom: 28px;">
+
+            <span style="width:100%; margin-left: 8px;">评论数 56 </span>
+
+
+
+            <div class="comment-topic">
+
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/i4.jpg" />
+                    <div style="margin-left: 12px; float: left;">XXXXXXX<br/><span style="font-size:8px;">1小时前</span></div>
+                </div>
+
+
+                <div class="comment-content" style="margin-left: 10%;">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <br>
+
+
+                    <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-up"></i> 100 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="comment-topic">
+
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/i5.jpg" />
+                    <div style="margin-left: 12px; float: left;">XXXXXXX<br/><span style="font-size:8px;">1小时前</span></div>
+                </div>
+
+
+                <div class="comment-content" style="margin-left: 10%;">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <br>
+
+
+                    <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-up"></i> 100 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="comment-topic">
+
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/i6.jpg" />
+                    <div style="margin-left: 12px; float: left;">XXXXXXX<br/><span style="font-size:8px;">1小时前</span></div>
+                </div>
+
+
+                <div class="comment-content" style="margin-left: 10%;">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <br>
+
+                    <img src="http://192.168.0.9:28888/img/i7.jpg" style="width:50%; height: 50%;">
+
+                    <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-up"></i> 100 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="comment-topic">
+
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/i8.jpg" />
+                    <div style="margin-left: 12px; float: left;">XXXXXXX<br/><span style="font-size:8px;">1小时前</span></div>
+                </div>
+
+
+                <div class="comment-content" style="margin-left: 10%;">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <br>
+
+
+                    <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-up"></i> 100 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="comment-topic">
+
+                <div class="user-avatar">
+                    <img  src="http://192.168.0.9:28888/img/i9.jpg" />
+                    <div style="margin-left: 12px; float: left;">XXXXXXX<br/><span style="font-size:8px;">1小时前</span></div>
+                </div>
+
+
+                <div class="comment-content" style="margin-left: 10%;">
+                  <span style="width:100%">
+                      这是我的图片
+                  </span>
+                    <br>
+
+                    <div class="ui-row-flex ui-whitespace" style="margin-top: 8px;">
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-up"></i> 100 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-thumbs-down"></i> 98 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-comments"></i> 63 </div>
+                        <div class="ui-col ui-col"><i class="fa fa-user-plus"></i> 聊天</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div style="width: 100%;text-align: center;">
+                <br/>
+                已到深渊
+            </div>
+
+        </div>
+    </div>
+
+    <footer style="background-color:#f7f7f8;">
+        <div class="ui-row-flex ui-whitespace" style="padding-top: 12px;">
+            <div class="ui-col ui-col-2" style="">
+                <section class="ui-input-wrap ui-border-t">
+                    <div class="ui-input ui-border-radius ui-input-text">
+                        <input type="text" name="" value="" placeholder="我也说一句...">
+                    </div>
+                </section>
+            </div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1; margin-left: 12px;"><i class="fa fa-heart" style="float: left;font-size: 18px;"></i><span style="font-size:18px;float: left;margin-left: 4px;">100</span></div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1; margin-left: 12px;"><i class="fa fa-star fa-1x" style="float: left;font-size: 18px;"></i><span style="font-size:18px;float: left;margin-left: 4px;">567</span></div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1; margin-left: 12px;"><i class="fa fa-comments fa-1x" style="float: left;font-size: 18px;"></i><span style="font-size:18px;float: left;margin-left: 4px;">33</span></div>
+
+        </div>
+    </footer>
+
+
+</div>
+
+
+</body>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+</script>
+</html>
