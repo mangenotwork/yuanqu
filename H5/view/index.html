@@ -127,7 +127,7 @@
 
 
 
-            <div class="topic">
+            <div class="topic" @click="detail">
                 <div class="user-avatar">
                     <img src="http://192.168.0.9:28888/img/1.jpg"/>
                     <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
@@ -156,7 +156,7 @@
             </div>
 
 
-            <div class="topic">
+            <div class="topic" @click="detail">
                 <div class="user-avatar">
                     <img  src="http://192.168.0.9:28888/img/1.jpg"/>
                     <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
@@ -188,7 +188,7 @@
             </div>
 
 
-            <div class="topic">
+            <div class="topic" @click="detail">
                 <div class="user-avatar">
                     <img  src="http://192.168.0.9:28888/img/1.jpg"/>
                     <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
@@ -223,7 +223,7 @@
             </div>
 
 
-            <div class="topic">
+            <div class="topic" @click="detail">
                 <div class="user-avatar">
                     <img  src="http://192.168.0.9:28888/img/1.jpg"/>
                     <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
@@ -245,7 +245,7 @@
 
 
 
-            <div class="topic">
+            <div class="topic" @click="detail">
                 <div class="user-avatar">
                     <img  src="http://192.168.0.9:28888/img/1.jpg"/>
                     <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
@@ -283,7 +283,7 @@
             </div>
 
 
-            <div class="topic">
+            <div class="topic" @click="detail">
                 <div class="user-avatar">
                     <img  src="http://192.168.0.9:28888/img/1.jpg"/>
                     <div class="user-name">XXXXXXX<br/><span class="topic-time">1小时前</span></div>
@@ -341,8 +341,8 @@
     <footer>
 
         <div class="ui-row-flex ui-whitespace">
-            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1"><i class="fa fa-cloud fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">社区</span></div>
-            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1"><i class="fa fa-venus-mars fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">好友</span></div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1" @click="index"><i class="fa fa-cloud fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">社区</span></div>
+            <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1" @click="friend"><i class="fa fa-venus-mars fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">好友</span></div>
             <div class="ui-col ui-col" style="text-align:center;padding-top: 0.05rem;"><i class="fa fa-camera" style="font-size: 38px;"></i></div>
             <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1"><i class="fa fa-comment fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">消息</span></div>
             <div class="ui-col ui-col" style="text-align:center;padding-top: 0.10rem;line-height: 1.1"><i class="fa fa-user fa-1x" style="width: 100%;"></i><span style="font-size:14px;margin-top: 0.1rem;">我的</span></div>
@@ -364,7 +364,15 @@
         methods: {
             detail() {
                 window.location.href="/detail";
-            }
+            },
+
+            index() {
+                window.location.href="/";
+            },
+
+            friend() {
+                window.location.href="/friend";
+            },
         }
     })
 </script>

@@ -28,6 +28,7 @@ func Router() *http.ServeMux {
 
 	mux.Handle("/detail", http.HandlerFunc(Detail))
 
+	mux.Handle("/friend", http.HandlerFunc(Friend))
 
 	return mux
 }
@@ -79,6 +80,20 @@ func Img(w http.ResponseWriter, r *http.Request) {
 func Detail(w http.ResponseWriter, r *http.Request) {
 	str, _ := os.Getwd()
 	path := str + "/view/detail.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		w.WriteHeader(404)
+		_,_=fmt.Fprintln(w, err)
+		return
+	}
+	w.Header().Add("Content-Type", "text/html; charset=utf-8")
+	_,_=fmt.Fprintln(w, string(data))
+	return
+}
+
+func Friend(w http.ResponseWriter, r *http.Request) {
+	str, _ := os.Getwd()
+	path := str + "/view/friend_list.html"
 	data, err := ioutil.ReadFile(path)
 	if err != nil {
 		w.WriteHeader(404)

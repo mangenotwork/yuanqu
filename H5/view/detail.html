@@ -101,7 +101,7 @@
     <!-- 选项卡 -->
     <div class="tab">
         <div class="ui-row-flex ui-whitespace">
-            <div class="ui-col" style="padding-top: 12px;padding-left: 12px;"><i class="fa fa-chevron-left" style="font-size:28px;"></i></div>
+            <div class="ui-col" style="padding-top: 12px;padding-left: 12px;" @click="returnpg"><i class="fa fa-chevron-left" style="font-size:28px;"></i></div>
             <div class="ui-col ui-col-4">
                 <div class="user-avatar">
                     <img  src="http://192.168.0.9:28888/img/1.jpg" />
@@ -328,6 +328,11 @@
         el: '#app',
         data: {
             message: 'Hello Vue!'
+        },
+        methods: {
+            returnpg() {
+                history.go(-1)
+            }
         }
     })
 </script>
